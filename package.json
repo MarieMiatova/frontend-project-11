@@ -1,0 +1,29 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "[![Actions Status](https://github.com/MarieMiatova/frontend-project-11/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/MarieMiatova/frontend-project-11/actions)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "airbnb": "^0.0.2",
+    "autoprefix": "^1.0.1",
+    "axios": "^1.7.9",
+    "babel": "^6.23.0",
+    "babel-install": "^2.1.0",
+    "babel-loader": "^9.2.1",
+    "bootstrap": "^5.3.3",
+    "css-loader": "^7.1.2",
+    "eslint": "^9.20.1",
+    "i18next": "^24.2.2",
+    "lint": "^0.8.19",
+    "lodash": "^4.17.21",
+    "make": "^0.8.1",
+    "on-change": "^5.0.1",
+    "utf-8": "^3.0.0",
+    "yup": "^1.6.1"
+  }
+}
