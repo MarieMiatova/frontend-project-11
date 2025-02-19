@@ -10,21 +10,21 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(dirName, 'dist'),
-    filename: 'bundle.js',
+    filename: 'bundle.js', 
   },
   devServer: {
-    static: path.resolve(dirName, 'dist'), 
+ static: path.resolve(dirName, 'dist'), 
     port: process.env.PORT || 8080, 
     host: '0.0.0.0', 
     open: true,
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: '[name].css', 
     }),
     new HtmlWebpackPlugin({
       template: 'index.html',
-      filename: 'index.html',
+      filename: 'index.html', 
     }),
   ],
   performance: {
@@ -34,11 +34,11 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/i,
-        exclude: /node_modules/,
+        exclude: /node_modules/, 
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react'],
+            presets: ['@babel/preset-env', '@babel/preset-react'], 
           },
         },
       },
@@ -49,7 +49,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          MiniCssExtractPlugin.loader, 
           'css-loader',
         ],
       },
