@@ -1,16 +1,16 @@
 const path = require('path'); 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { dirname } = require('path'); // Импорт dirname
+const { dirname } = require('path'); 
 
-const dirName = dirname(__filename); // Используем __filename для получения пути к текущему файлу
+const dirName = dirname(__filename); 
 
 module.exports = {
   mode: process.env.NODE_ENV || 'development',
   entry: './src/index.js',
   output: {
     path: path.resolve(dirName, 'dist'),
-    filename: 'bundle.js', // Добавьте имя выходного файла
+    filename: 'bundle.js', 
   },
   devServer: {
     open: true,
@@ -18,11 +18,11 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].css', // Определите имя для выходного CSS-файла
+      filename: '[name].css', 
     }),
     new HtmlWebpackPlugin({
       template: 'index.html',
-      filename: 'index.html', // Убедитесь, что файл index.html будет создан
+      filename: 'index.html', 
     }),
   ],
   performance: {
@@ -32,11 +32,11 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/i,
-        exclude: /node_modules/, // Исключаем node_modules
+        exclude: /node_modules/, 
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react'], // Добавьте нужные библиотеки Babel
+            presets: ['@babel/preset-env', '@babel/preset-react'], 
           },
         },
       },
@@ -47,7 +47,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          MiniCssExtractPlugin.loader, // Используем MiniCssExtractPlugin.loader для извлечения CSS
+          MiniCssExtractPlugin.loader, 
           'css-loader',
         ],
       },

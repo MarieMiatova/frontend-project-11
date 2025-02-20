@@ -27,10 +27,10 @@ i18n
     .use(initReactI18next)
     .init({
         resources,
-        lng: "ru", // Установите язык по умолчанию
+        lng: "ru", 
         fallbackLng: "en",
         interpolation: {
-            escapeValue: false // React уже предотвращает XSS
+            escapeValue: false 
         }
     });
 
