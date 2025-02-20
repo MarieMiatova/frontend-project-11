@@ -13,10 +13,8 @@ module.exports = {
     filename: 'bundle.js', 
   },
   devServer: {
- static: path.resolve(dirName, 'dist'), 
-    port: process.env.PORT || 8080, 
-    host: '0.0.0.0', 
     open: true,
+    host: 'localhost',
   },
   plugins: [
     new MiniCssExtractPlugin({
