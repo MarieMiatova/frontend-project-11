@@ -1,16 +1,17 @@
-const path = require('path'); 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { dirname } = require('path'); 
+import path, { dirname } from 'node:path';
+import { fileURLToPath } from 'url';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-const dirName = dirname(__filename); 
+const filename = fileURLToPath(import.meta.url);
+const dirName = dirname(filename);
 
-module.exports = {
+export default {
   mode: process.env.NODE_ENV || 'development',
   entry: './src/index.js',
   output: {
     path: path.resolve(dirName, 'dist'),
-    filename: 'bundle.js', 
+    filename: 'bundle.js',
   },
   devServer: {
     open: true,
@@ -19,11 +20,11 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].css', 
+      filename:'[name].css',
     }),
     new HtmlWebpackPlugin({
       template: 'index.html',
-      filename: 'index.html', 
+      filename: 'index.html',
     }),
   ],
   performance: {
