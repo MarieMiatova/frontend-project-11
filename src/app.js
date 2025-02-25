@@ -82,7 +82,7 @@ const app = () => {
         const currentNewPosts = _.differenceBy(response.posts, filterPosts, 'title')
           .map((post) => ({ feedId, id: _.uniqueId(), ...post }));
 
-        if (currentNewPosts.length > 0) {         
+        if (currentNewPosts.length > 0) {
           status.posts.unshift(...currentNewPosts);
           status.posts.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
           status.processState = 'processed';

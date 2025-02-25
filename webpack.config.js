@@ -20,7 +20,7 @@ export default {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename:'[name].css',
+      filename: '[name].css',
     }),
     new HtmlWebpackPlugin({
       template: 'index.html',
@@ -34,11 +34,11 @@ export default {
     rules: [
       {
         test: /\.(js|jsx)$/i,
-        exclude: /node_modules/, 
+        exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react'], 
+            presets: ['@babel/preset-env', '@babel/preset-react'],
           },
         },
       },
@@ -49,7 +49,7 @@ export default {
       {
         test: /\.css$/,
         use: [
-          MiniCssExtractPlugin.loader, 
+          MiniCssExtractPlugin.loader,
           'css-loader',
         ],
       },
