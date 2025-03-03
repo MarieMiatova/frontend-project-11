@@ -65,7 +65,7 @@ export default (state, i18nextInstance) => {
       li.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'aling-items-start', 'border-0', 'border-end-0');
       const postTitle = document.createElement('a');
       if (state.id.has(post.id)) {
-        postTitle.classList.add('fw-normal');
+        postTitle.classList.add('fw-normal', 'link-secondary');
       } else {
         postTitle.classList.add('fw-bold');
       }
