@@ -13,12 +13,16 @@ https://frontend-project-11-maria-miatova.vercel.app/
 
 
 __Setup__
+
+
 To setup this project run
 
   make install
 
 
 __Deployment__
+
+
 To deploy this project run
 
   make develop
